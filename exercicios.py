@@ -37,10 +37,17 @@
 
 
 lista_num = [1,2,3,4,5,6,7,8,9,10]
-lista_nome = ['Luís', 'Liana', 'Gabi', 'Cristine']
+lista_nome = ['Luís', 'Liana', 'Gabi', 'Lelo']
 lista_ano = [1990,2024]
 pares = []
 impares = []
+
+def testetry():
+    try:
+        media = soma_de_todos / len(lista_num)
+        print('A média de todos é:',media)
+    except:
+        print('A lista esta vazia')
 
 for num in lista_num:
     print(f'{num}')
@@ -49,6 +56,7 @@ for num in lista_num:
     else:
         impares.append(num)
 soma_dos_impares = sum(impares)
+soma_de_todos = sum(impares+pares)
 lista_num.sort(reverse=True)
 
 print(f'{lista_num}')
@@ -56,8 +64,10 @@ print(f'Nomes: {lista_nome}')
 print(f'Lista de pares: {pares}')
 print(f'Lista de ímpares: {impares}')
 print(f'Soma dos ímpares: {soma_dos_impares}')
+print(f'Soma de todos: {soma_de_todos}')
+testetry()
 
-tabuada = int(input('Digite um numero \n'))
+tabuada = int(input('\nDigite um numero \n\n'))
 for numero in range(11):
     resultado = tabuada * numero
     print(f'{tabuada} X {numero} = {resultado}')
